@@ -1,12 +1,7 @@
-import { useRouter } from 'next/router'
-import projects from '../../lib/projects'
 import Link from 'next/link'
+import projects from '../../lib/projects'
 
-export default function ProjectDetail() {
-  const router = useRouter()
-  const { slug } = router.query
-  if (!slug) return null
-  const project = projects.find(p => p.slug === slug)
+export default function ProjectDetail({ project }) {
   if (!project) {
     return <div className="container mx-auto px-6 py-12">Project not found</div>
   }
@@ -27,4 +22,14 @@ export default function ProjectDetail() {
       </section>
     </div>
   )
+}
+
+export async function getStaticPaths() {
+  const paths = (projects || []).map(p => ({ params: { slug: p.slug } }))
+  return { paths, fallback: false } // fallback false => only listed paths compile
+}
+
+export async function getStaticProps({ params }) {
+  const project = projects.find(p => p.slug === params.slug) || null
+  return { props: { project } }
 }
