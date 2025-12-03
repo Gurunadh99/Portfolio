@@ -21,8 +21,10 @@ jobs:
           node-version: 18
 
       - name: Install dependencies
-        run: npm install
-
+        run: |
+          npm install
+          npm install tailwindcss@latest
+          
       - name: Build and export
         run: |
           npm run build
