@@ -13,8 +13,7 @@
     "next": "13.5.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "tailwindcss": "^4.1.17",
-    "@tailwindcss/postcss": "^2.1.0",
+    "tailwindcss": "^3.4.8",
     "autoprefixer": "^10.4.14",
     "postcss": "^8.4.21"
   }
