@@ -1,0 +1,1 @@
+{"pageProps":{"project":{"slug":"crowd-monitor","title":"Crowd Monitoring — Fight Detection","year":2023,"tech":["Computer Vision","Deep Learning","OpenCV"],"summary":"Real-time fight detection prototype for crowd safety.","metrics":["~90% recall","<2s alert latency"]}},"__N_SSG":true}
