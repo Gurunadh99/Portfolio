@@ -23,7 +23,7 @@ jobs:
       - name: Install dependencies
         run: |
           npm install
-          npm install @tailwindcss/postcss@latest
+              npm install tailwindcss@^3.4.8 postcss@^8.4.21 autoprefixer@^10.4.14
           
       - name: Build and export
         run: |
